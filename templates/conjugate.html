@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conjugate Verb</title>
+
+    <!-- #Validation script -->
+    <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        let inputs = document.querySelectorAll("input");
+        let empty = Array.from(inputs).some(input => input.value.trim() === "");
+        if (empty) {
+            alert("Please fill in all forms.");
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+    </script>
+  
+</head>
+<body>
+    <h1>Conjugate {{ verb }}</h1>
+    <form action="/conjugate" method="post">
+        <!-- Example for לאהוב, adjust according to the actual verb data structure -->
+        <input type="text" name="m_s" placeholder="Masculine Singular">
+        <input type="text" name="f_s" placeholder="Feminine Singular">
+        <input type="text" name="m_p" placeholder="Masculine Plural">
+        <input type="text" name="f_p" placeholder="Feminine Plural">
+        <button type="submit">Check</button>
+    </form>
+</body>
+</html>
