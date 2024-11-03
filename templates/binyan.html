@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Binyan</title>
+</head>
+<body>
+    <h1>Select the correct Binyan for {{ verb }}</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form action="/binyan" method="post">
+        {% for binyan in binyanim %}
+            <button type="submit" name="binyan" value="{{ binyan }}">{{ binyan }}</button>
+        {% endfor %}
+    </form>
+</body>
+</html>
