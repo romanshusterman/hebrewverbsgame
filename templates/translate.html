@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verb Translation</title>
+</head>
+<body>
+    <h1>Translation for {{ verb }}</h1>
+    <p>English: {{ translations.english }}</p>
+    <p>Russian: {{ translations.russian }}</p>
+    <form action="/translate" method="post">
+        <button type="submit">Understand</button>
+    </form>
+</body>
+</html>
