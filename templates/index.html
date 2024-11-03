@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verb Quiz</title>
+</head>
+<body>
+    <h1>Do you know this verb in Hebrew?</h1>
+    <h2>{{ verb }}</h2>
+    <form action="/process_response" method="post">
+        <button type="submit" name="response" value="yes">Yes</button>
+        <button type="submit" name="response" value="no">No</button>
+    </form>
+</body>
+</html>
